@@ -28,3 +28,19 @@ is initialized with the name of the desired controller you've made.
 
 Scope - Ties the controller to the view. The view and controller do not need to know about each other
 but the scope keeps the two tied to each other.
+
+Module
+==============
+
+Modules - Modules can have a config functions that can define different Routes. Acts as an object container.
+Once the module name is defined then you can go into `ng-app` with the module name.
+
+Routes - Routes has a controller and a view assigned to it. Of course the controller and the view
+communicate via the `$scope`
+
+Factories - Can be Services or Resources that the controller will use to get data. Views use Directives in this case.
+
+Creating a Module
+===================
+
+var demoApp = angular.module('demoApp',[]);
