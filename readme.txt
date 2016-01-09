@@ -16,3 +16,15 @@ filter.
 
 Data Bind - Binding allows you to assign a directive name's value to an expression `{{directive-name-here}}` 
 that will then display the value of the directive name
+
+
+MVC
+==========
+
+Views - 
+
+Controller - A controller can exists in a specific <div> or the whole page given the ng-controller 
+is initialized with the name of the desired controller you've made.
+
+Scope - Ties the controller to the view. The view and controller do not need to know about each other
+but the scope keeps the two tied to each other.
