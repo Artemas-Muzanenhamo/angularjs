@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app> <!-- This is a directive...-->
 	<head>
 		<title>Pictopage</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	</head>
-	<body>
+	<body data-ng-init="names=['Artemas M', 'Another Name', 'Jane Doe', 'John Doe']"> <!-- You can make a directive array initialization like this. -->
+		Name:
+		<br />
+		<input type="text" data-ng-model="name"/> {{ name }} <!-- This binding will repeat what has been typed-->
+		<br />
+		<ul>
+			<li data-ng-repeat="personName in names">{{ personName }}</li>
+		</ul>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	</body>
 </html>
