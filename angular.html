@@ -3,13 +3,13 @@
 	<head>
 		<title>Pictopage</title>
 	</head>
-	<body data-ng-init="names=['Artemas M', 'Another Name', 'Jane Doe', 'John Doe']"> <!-- You can make a directive array initialization like this. -->
+	<body data-ng-init="customers=[{name:'Artemas M',city:'New York'},{name:'Another Name',city:'New Jersey'},{name:'John Doe',city:'London'}]"><!--Name/City Object-->
 		Name:
 		<br />
 		<input type="text" data-ng-model="name"/> {{ name }} <!-- This binding will repeat what has been typed-->
 		<br />
 		<ul>
-			<li data-ng-repeat="personName in names">{{ personName }}</li>
+			<li data-ng-repeat="cust in customers | filter: name | orderBy:'city'">{{ cust.name }} - {{ cust.city }}</li> <!-- use of filters...-->
 		</ul>
 
 
