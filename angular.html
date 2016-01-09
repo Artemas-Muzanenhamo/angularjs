@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-ng-app="demoApp"> <!-- This is a directive...-->
+<html data-ng-app="demoApp"> <!-- The Directive must point to the right object for the SimpleController to work when it's injected.-->
 	<head>
 		<title>Pictopage</title>
 	</head>
@@ -24,14 +24,21 @@
 
 				2nd Option
 			*/
-			var demoApp = angular.module('demoApp',[]);
-			demoApp.controller('SimpleController', function ($scope){
+			var demoApp = angular.module('demoApp',[]); //initialize our module object.
+
+			//in some cases, we might need to create multiple controllers, 
+			//Below is an elegant way to achieve this.
+			var controllers = {};
+
+			controllers.SimpleController = function ($scope){
 				$scope.customers = [
 					{name: 'Artemas M', city: 'London'},
 					{name: 'Steve Jobs', city: 'Washington'},
 					{name: 'Robert M', city: 'Zimbabwe'}
 				];
-			});
+			};
+
+			demoApp.controller(controllers);
 		</script>
 	</body>
 </html>
