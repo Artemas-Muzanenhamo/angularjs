@@ -22,17 +22,16 @@
 				Within this module with then assign our contoller to the 
 				object. We can Achieve this with two options. 
 
-				1st Option
+				2nd Option
 			*/
 			var demoApp = angular.module('demoApp',[]);
-			function SimpleController($scope){
+			demoApp.controller('SimpleController', function ($scope){
 				$scope.customers = [
 					{name: 'Artemas M', city: 'London'},
 					{name: 'Steve Jobs', city: 'Washington'},
 					{name: 'Robert M', city: 'Zimbabwe'}
 				];
-			}
-			demoApp.controller('SimpleController', SimpleController);
+			});
 		</script>
 	</body>
 </html>
