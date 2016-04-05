@@ -44,3 +44,18 @@ Creating a Module
 ===================
 
 var demoApp = angular.module('demoApp',[]);
+
+
+============================================
+
+# EXTRA INFO: #
+
+============================================
+
+**1. Introduction to $routeProvider**
+
+The magic of Routing is taken care by a service provider that Angular provides out of the box called $routeProvider. An Angular service is a singleton object created by a service factory. These service factories are functions which, in turn, are created by a service provider. The service providers are constructor functions. When instantiated they must contain a property called $get, which holds the service factory function.
+
+When we use AngularJS’s dependency injection and inject a service object in our Controller, Angular uses $injector to find corresponding service injector. Once it get a hold on service injector, it uses $get method of it to get an instance of service object. Sometime the service provider needs certain info in order to instantiate service object.
+
+Application routes in Angular are declared via the $routeProvider, which is the provider of the $route service. This service makes it easy to wire together controllers, view templates, and the current URL location in the browser. Using this feature we can implement deep linking, which lets us utilize the browser’s history (back and forward navigation) and bookmarks.
