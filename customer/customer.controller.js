@@ -1,12 +1,14 @@
 angular
     .module('app.customer', [])
-    .controller('CustomerController', function($scope, customerService){
-        const self = this;
-        self.users = users;
+    .controller('CustomerController', CustomerController);
 
-        function users() {
-            return customerService.users();
-        }
+function CustomerController($scope, customerService) {
+    const self = this;
+    self.users = users;
 
-        $scope.customers = users();
-    });
+    function users() {
+        return customerService.users();
+    }
+
+    $scope.customers = users();
+}
