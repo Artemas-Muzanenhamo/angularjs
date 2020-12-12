@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="app"> <!-- The Directive must point to the right object for the SimpleController to work when it's injected.-->
+	<head>
+		<title>AngularJS Demo</title>
+	</head>
+	<body >
+		<div ng-controller="CustomerController as ctrl"> <!-- Initialization of the controller I want to use. It only exists in this DIV ONLY-->
+			Name:
+			<br />
+			<input type="text" data-ng-model="name"/>
+			<br />
+			<ul>
+				<li ng-repeat="cust in customers | filter: name | orderBy:'city'">{{ cust.name }} - {{ cust.city }}</li> <!-- use of filters...-->
+			</ul>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+		<!-- MODULES -->
+		<script src="app.module.js"></script>
+
+		<!-- CONTROLLER -->
+		<script src="customer/customer.controller.js"></script>
+
+		<!-- SERVICES -->
+		<script src="customer/customer.service.js"></script>
+	</body>
+</html>

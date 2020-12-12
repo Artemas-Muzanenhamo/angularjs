@@ -1,3 +1,4 @@
-angular.module('demoApp',[
-    'demoApp.service'
+angular.module('app',[
+    'app.customer',
+    'app.customer.service'
 ]);

@@ -1,8 +1,8 @@
 angular
-    .module('demoApp.service', [])
-    .service('demoAppService', DemoAppService);
+    .module('app.customer.service', [])
+    .service('customerService', CustomerService);
 
-function DemoAppService() {
+function CustomerService() {
     const self = this;
     self.users = users;
 
