@@ -14,31 +14,12 @@
 			</ul>
 		</div>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 
-		<script>
-			/*
-				Here I initialize an angular module object called demoApp.
-				Within this module with then assign our contoller to the 
-				object. We can Achieve this with two options. 
+		<!-- MODULES -->
+		<script src="app.module.js"></script>
 
-				2nd Option
-			*/
-			var demoApp = angular.module('demoApp',[]); //initialize our module object.
-
-			//in some cases, we might need to create multiple controllers, 
-			//Below is an elegant way to achieve this.
-			var controllers = {};
-
-			controllers.SimpleController = function ($scope){
-				$scope.customers = [
-					{name: 'Artemas M', city: 'London'},
-					{name: 'Steve Jobs', city: 'Washington'},
-					{name: 'Robert M', city: 'Zimbabwe'}
-				];
-			};
-
-			demoApp.controller(controllers);
-		</script>
+		<!-- CONTROLLER -->
+		<script src="app.component.js"></script>
 	</body>
 </html>
