@@ -4,7 +4,7 @@
 		<title>Pictopage</title>
 	</head>
 	<body >
-		<div data-ng-controller="SimpleController"> <!-- Initialization of the controller I want to use. It only exists in this DIV ONLY-->
+		<div data-ng-controller="SimpleController as ctrl"> <!-- Initialization of the controller I want to use. It only exists in this DIV ONLY-->
 			Name:
 			<br />
 			<input type="text" data-ng-model="name"/>
@@ -20,6 +20,9 @@
 		<script src="app.module.js"></script>
 
 		<!-- CONTROLLER -->
-		<script src="app.component.js"></script>
+		<script src="app.controller.js"></script>
+
+		<!-- SERVICES -->
+		<script src="app.service.js"></script>
 	</body>
 </html>
