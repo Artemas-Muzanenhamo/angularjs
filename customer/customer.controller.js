@@ -1,6 +1,6 @@
 angular
     .module('app.customer', [])
-    .controller('CustomerController', CustomerController);
+    .controller('customerController', CustomerController);
 
 function CustomerController($scope, customerService) {
     const self = this;
