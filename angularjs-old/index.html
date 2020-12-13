@@ -5,9 +5,9 @@
 	</head>
 	<body >
 		<div ng-controller="customerController as ctrl"> <!-- Initialization of the controller I want to use. It only exists in this DIV ONLY-->
-			Name:
-			<br />
-			<input type="text" data-ng-model="name"/>
+			<label>SEARCH FOR CUSTOMER:
+				<input type="text" ng-model="name"/>
+			</label>
 			<br />
 			<ul>
 				<li ng-repeat="cust in customers | filter: name | orderBy:'city'">{{ cust.name }} - {{ cust.city }}</li> <!-- use of filters...-->

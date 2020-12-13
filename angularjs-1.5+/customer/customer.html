@@ -1,7 +1,7 @@
 <div>
-    Name:
-    <br />
-    <input type="text" data-ng-model="name"/>
+    <label>SEARCH FOR CUSTOMER:
+        <input type="text" ng-model="name"/>
+    </label>
     <br />
     <ul>
         <li ng-repeat="cust in customers | filter: name | orderBy:'city'">{{ cust.name }} - {{ cust.city }}</li> <!-- use of filters...-->
