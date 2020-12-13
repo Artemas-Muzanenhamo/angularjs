@@ -4,6 +4,6 @@
     </label>
     <br />
     <ul>
-        <li ng-repeat="cust in customers | filter: name | orderBy:'city'">{{ cust.name }} - {{ cust.city }}</li> <!-- use of filters...-->
+        <li data-ng-repeat="customer in ctrl.customers | filter: name | orderBy:'city'">{{ customer.name }} - {{ customer.city }}</li> <!-- use of filters...-->
     </ul>
 </div>
