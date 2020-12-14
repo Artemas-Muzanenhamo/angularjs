@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html ng-app="app"> <!-- The Directive must point to the right object for the SimpleController to work when it's injected.-->
+<html ng-app="app">
 	<head>
 		<title>AngularJS Demo</title>
 	</head>
 	<body >
 		<customer-component></customer-component>
 
+		<!-- DEPENDENCIES -->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-
 		<!-- MODULES -->
 		<script src="app.module.js"></script>
-
 		<!-- CONTROLLER -->
 		<script src="customer/customer.component.js"></script>
-
 		<!-- SERVICES -->
 		<script src="customer/customer.service.js"></script>
 	</body>
