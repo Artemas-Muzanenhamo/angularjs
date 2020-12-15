@@ -27,22 +27,32 @@ module.exports = {
             },
             {
                 test: /\.ts$/,
-                include: path.resolve(__dirname, 'src', 'src/customer'),
+                include: path.resolve(__dirname, 'src'),
                 exclude: /node_modules/,
                 enforce: "pre",
-                use: 'babel-loader'
+                use: ['babel-loader', 'ts-loader']
+            },
+            {
+                test: /\.html$/i,
+                include: path.resolve(__dirname, 'src/customer'),
+                exclude: /node_modules/,
+                enforce: "pre",
+                loader: 'html-loader',
             }
         ]
     },
 
     resolve: {
-        extensions: ['.js', '.ts']
+        extensions: ['.html','.js', '.ts']
     },
 
     plugins: [
         new HtmlWebpackPlugin({
             template: 'index.html',
             title: 'AngularJS Demo with Webpack + TS'
+        }),
+        new HtmlWebpackPlugin({
+            template: 'customer/customer.html'
         })
     ]
 }
