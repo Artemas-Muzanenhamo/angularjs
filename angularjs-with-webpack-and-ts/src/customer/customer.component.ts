@@ -11,7 +11,9 @@ class CustomerController implements ICustomerComponent {
 }
 
 angular
-    .module('app.customer', [])
+    .module('app.customer', [
+        'app.customer.service'
+    ])
     .component('customerComponent', {
         templateUrl: 'customer/customer.html',
         controller: CustomerController,

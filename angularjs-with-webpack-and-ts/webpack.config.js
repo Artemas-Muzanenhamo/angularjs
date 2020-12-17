@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -48,11 +49,19 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
+            filename: 'index.html',
             template: 'index.html',
             title: 'AngularJS Demo with Webpack + TS'
         }),
         new HtmlWebpackPlugin({
+            filename: 'customer/customer.html',
             template: 'customer/customer.html'
+        }),
+        new CleanWebpackPlugin({
+            dry: true,
+            verbose: true,
+            cleanOnceBeforeBuildPatterns: ['dist'],
+            cleanStaleWebpackAssets: true
         })
     ]
 }
