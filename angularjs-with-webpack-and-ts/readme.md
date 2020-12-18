@@ -36,8 +36,3 @@ Install
 version of JavaScript in current or older browser environments.
 
 `npm install @babel/core @babel/preset-typescript`
-
-### Install ESLint and ESLint Loader
-`npm install eslint`
-`npm install eslint-loader`
-* This is a code analysis tool used to statically analyse your code to quickly find problems.
