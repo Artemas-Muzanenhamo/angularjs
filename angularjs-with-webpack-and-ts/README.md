@@ -37,3 +37,11 @@ so that our AngularJS syntax will include objects with types. E.g. `angular.modu
 version of JavaScript in current or older browser environments.
 
 `npm install @babel/core @babel/preset-typescript`
+
+### Install html-webpack-plugin
+`npm install html-webpack-plugin --save-dev`
+* We will need this to load all of our HTML files in our output directory.
+
+### Install clean-webpack-plugin
+`npm install clean-webpack-plugin --save-dev`
+* We will need this to clean the output directory so that we don't serve any outdated resources on the UI.
