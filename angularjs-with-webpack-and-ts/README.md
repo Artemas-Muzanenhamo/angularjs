@@ -38,6 +38,11 @@ version of JavaScript in current or older browser environments.
 
 `npm install @babel/core @babel/preset-typescript`
 
+### Install Babel AngularJS Annotate
+`npm install babel-plugin-angularjs-annotate --save-dev`
+
+* Adds Angular 1.x DI annotations to ES5/ES6 code being processed by Babel, with support for explicit annotations `(/* @ngInject */)`, and automatic (implicit) annotation of typical Angular code patterns.
+
 ### Install html-webpack-plugin
 `npm install html-webpack-plugin --save-dev`
 * We will need this to load all of our HTML files in our output directory.
