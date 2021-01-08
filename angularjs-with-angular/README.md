@@ -32,3 +32,15 @@
 
 ### Install Awesome Typescript Loader
 `npm install awesome-typescript-loader --save-dev`
+
+### Install Null Loader
+`npm install null-loader --save-dev`
+
+### Install Raw Loader
+`npm install raw-loader --save-dev`
+
+### Install RimRaf
+`npm install rimraf --save-dev`
+
+### Install Webpack Bundle Analyzer
+`npm install webpack-bundle-analyzer --save-dev`
