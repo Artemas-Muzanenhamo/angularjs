@@ -1,0 +1,9 @@
+<div>
+    <label>SEARCH FOR CUSTOMER:
+        <input type="text" ng-model="name"/>
+    </label>
+    <br />
+    <ul>
+        <li data-ng-repeat="customer in ctrl.customers | filter: name | orderBy:'city'">{{ customer.name }} - {{ customer.city }}</li> <!-- use of filters...-->
+    </ul>
+</div>

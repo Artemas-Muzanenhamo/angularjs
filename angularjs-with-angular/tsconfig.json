@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "node_modules/types"
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
