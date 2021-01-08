@@ -1,52 +1,17 @@
-# AngularJS with Webpack + Typescript
+# AngularJS + Angular
 
-## Pre-Requisites
-- npm (installed on your machine globally)
+## Install Angular 2+ dependencies
 
-## How to start the application
-- To start the application, run: `npm start`.
+### Install Angular 2+
+`npm install @angular/common @angular/compiler @angular/core @angular/forms @angular/http @angular/platform-browser @angular/platform-browser-dynamic @angular/router @angular/upgrade`
 
-## Dependencies for AngularJS + Webpack + Typescript
-In order to get AngularJS working with Webpack + Typescript you will need to add the following dependencies:
+### Install core-js
 
-### Install TypeScript
-`npm install typescript --save`
-* Since we will be using TypeScript instead of JavaScript.
+`npm install core-js`
 
-### Install TypeScript Type Definitions
-`npm install tsd --save`
-* We will need this for our Typed Definitions of our TypeScript code.
+## Install rxjs
+`npm install rxjs`
 
-### Install AngularJS and Types
-`npm install angular --save`
-* Instead of adding the AngularJS CDN in the `index.html`, we will no longer use that approach, and we will let webpack inject that for us during the build stage.
+## Install zone
 
-`npm install @types/angular --save-dev`
-* Since we will be working with AngularJS in TypeScript, we would want our AngularJS code to be typed as well
-so that our AngularJS syntax will include objects with types. E.g. `angular.module()` object is of type `IModule`.
-
-### Install Webpack and Types
-`npm install webpack --save`
-* We will need this for bundling up our code into a single minified source JS file that we will serve to the browser.
-
-`npm install @types/webpack`
-
-### Install Babel Dependencies and Types
-`npm install babel babel-core babel-loader babel-plugin-angularjs-annotate babel-preset-es2015`
-* This is a JavaScript compiler that is mainly used to convert `es2015` code into a backwards compatible
-version of JavaScript in current or older browser environments.
-
-`npm install @babel/core @babel/preset-typescript`
-
-### Install Babel AngularJS Annotate
-`npm install babel-plugin-angularjs-annotate --save-dev`
-
-* Adds Angular 1.x DI annotations to ES5/ES6 code being processed by Babel, with support for explicit annotations `(/* @ngInject */)`, and automatic (implicit) annotation of typical Angular code patterns.
-
-### Install html-webpack-plugin
-`npm install html-webpack-plugin --save-dev`
-* We will need this to load all of our HTML files in our output directory.
-
-### Install clean-webpack-plugin
-`npm install clean-webpack-plugin --save-dev`
-* We will need this to clean the output directory so that we don't serve any outdated resources on the UI.
+`npm install zone.js` 
