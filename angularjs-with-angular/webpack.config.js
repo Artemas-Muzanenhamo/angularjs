@@ -5,9 +5,13 @@ const path = require('path');
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'production',
-    entry: "./app.module.ts",
+    entry: {
+        'ng1': './app.module.ts',
+        'ng2': './main.ts'
+    },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
+        chunkFilename: '[id].chunk.js',
         path: __dirname + '/dist'
     },
 
@@ -28,13 +32,13 @@ module.exports = {
             },
             {
                 test: /\.ts$/,
-                include: path.resolve(__dirname, 'src/customer'),
+                include: path.resolve(__dirname, 'src'),
                 exclude: /node_modules/,
                 enforce: "pre",
-                use: ['babel-loader', 'ts-loader']
+                use: ['babel-loader', 'ts-loader', 'angular2-template-loader']
             },
             {
-                test: /\.html$/i,
+                test: /\.html$/,
                 include: path.resolve(__dirname, 'src/customer'),
                 exclude: /node_modules/,
                 enforce: "pre",
@@ -44,7 +48,7 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ['.html','.js', '.ts']
+        extensions: ['.html', '.js', '.ts']
     },
 
     plugins: [

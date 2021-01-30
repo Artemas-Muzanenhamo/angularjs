@@ -15,7 +15,7 @@ angular
         'app.customer.service'
     ])
     .component('customerComponent', {
-        templateUrl: 'customer/customer.html',
+        templateUrl: './customer.html',
         controller: CustomerController,
         controllerAs: 'ctrl'
     });
