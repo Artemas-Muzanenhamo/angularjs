@@ -3,7 +3,9 @@
     "target": "ES5",
     "outDir": "dist",
     "declaration": true,
-    "declarationDir": "node_modules/types"
+    "declarationDir": "node_modules/types",
+    "module": "CommonJS",
+    "moduleResolution": "Node"
   },
   "include": [
     "src/**/*"

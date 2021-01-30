@@ -44,3 +44,25 @@
 
 ### Install Webpack Bundle Analyzer
 `npm install webpack-bundle-analyzer --save-dev`
+
+---
+
+## Preparing for a Webpack build
+
+1) Change every component's `templateUrl` to point to the relative path: 
+    e.g. `templateUrl: 'customer/customer.html'` to `templateUrl: './customer.html',`
+
+2) Fix usage of global variables
+
+3) Add module and moduleResolution to the `tsconfig.json`
+```json
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "Node"
+  }
+}
+```
+
+4) Give webpack all the angularjs files that we have so we'll reference that in a single file
+`index.ts`.
