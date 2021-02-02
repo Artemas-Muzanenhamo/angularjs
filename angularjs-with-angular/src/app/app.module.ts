@@ -11,9 +11,9 @@ import {AppComponent} from "./app.component";
     declarations: [
         AppComponent
     ],
-    providers: [],
-    bootstrap: [
-        AppComponent
-    ]
+    providers: []
 })
-export class AppModule {}
+export class AppModule {
+    // Empty placeholder method to satisfy the `Compiler`.
+    ngDoBootstrap() {}
+}

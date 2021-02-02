@@ -4,10 +4,10 @@ const path = require('path');
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
-    mode: 'production',
+    mode: 'development',
     entry: {
         'ng1': './app.module.ts',
-        'ng2': './main.ts'
+        'ng2': './app/app.module.ts'
     },
     output: {
         filename: '[name].bundle.js',
